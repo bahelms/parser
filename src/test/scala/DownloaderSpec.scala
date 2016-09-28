@@ -1,5 +1,5 @@
-import parser.UnitSpec
-import parser.DownloaderSpec
+import parser.tests.UnitSpec
+import parser.Downloader
 
 class DownloaderSpec extends UnitSpec {
   test("`connect` returns hello") {

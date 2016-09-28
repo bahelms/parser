@@ -1,9 +1,7 @@
-FROM frolvlad/alpine-scala:2.11
+FROM 1science/sbt:0.13.8-oracle-jre-8
 
 WORKDIR /usr/src/app/
-COPY src/main/scala/ .
-RUN scalac *.scala
-
-# install sbt
+COPY . .
+RUN sbt clean compile
 
 CMD ["scala", "Main"]
